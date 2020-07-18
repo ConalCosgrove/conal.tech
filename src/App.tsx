@@ -1,17 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
+import Home from './pages/Home';
+import Article from './pages/Article';
 import './App.css';
-
 function App() {
   return (
+
+    <Router>
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Conal is starting from here <span role="img" aria-label="smiling face">😊</span>
+          conal.tech <span role="img" aria-label="space invader">👾</span>
         </p>
       </header>
+      <Switch>
+          <Route path='/articles/*'>
+            <Article/>
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
     </div>
+    </Router>
   );
 }
 
