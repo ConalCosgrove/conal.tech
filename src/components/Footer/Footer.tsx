@@ -5,7 +5,13 @@ import { default as urls } from '../../data/static';
 const useStyles = makeStyles({
   root: {
     backgroundColor: 'steelblue',
-    width: 'stretch'
+    width: '100%',
+    paddingTop:5,
+    paddingBottom:5,
+    position: "fixed",
+    left: 0,
+    bottom: 0,
+    
   },
   p: {
   },
