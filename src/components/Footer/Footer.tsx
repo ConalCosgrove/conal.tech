@@ -1,9 +1,38 @@
 import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import { default as urls } from '../../data/static';
+
+const useStyles = makeStyles({
+  root: {
+    backgroundColor: 'steelblue',
+    width: 'stretch'
+  },
+  p: {
+  },
+  a: {
+    '& visited': {
+      textDecoration: 'none',
+      color: 'black'
+    },
+
+    textDecoration: 'none',
+    color: 'black'
+  }
+});
+
+const linkEmoji = <span role='img' aria-label='link emoji'>🔗</span>;
 
 export default function Footer() {
+  const { apiSourceCodeURL, frontendSourceCodeURL } = urls;
+  const styles = useStyles();
   return (
-    <h3> 
-      {"Stack: Heroku ☁️  ~> Nginx ⚙️ ~> ReactJS ⚛️"}
-    </h3>
+    <div className={styles.root}>
+      <p className={styles.p}> 
+      {linkEmoji} <a href={frontendSourceCodeURL} className={styles.a}>Frontend written in Typescript + ReactJS</a> <br/>
+      {linkEmoji}<a href={apiSourceCodeURL} className={styles.a}>API written in go.</a> <br/>
+      Hosted on Heroku ☁️ <br/> 
+      
+      </p>
+    </div>
   )
 }
