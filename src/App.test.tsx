@@ -2,8 +2,10 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+
+test('renders header with conal.tech text', () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/Conal is starting from here/i);
+  const linkElement = getByText(/conal.tech/i);
   expect(linkElement).toBeInTheDocument();
 });
+

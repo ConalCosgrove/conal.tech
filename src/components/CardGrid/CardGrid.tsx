@@ -22,7 +22,7 @@ export default function CardGrid(props: GridProps) {
       justify="center" >
         {
           props.cards.map((card) => {
-            return <OptionCard data={card}></OptionCard>
+            return <OptionCard key={card.title} data={card}></OptionCard>
           })
         }
         </Grid>
