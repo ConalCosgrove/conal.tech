@@ -1,2 +1,2 @@
 # conal.tech
-Source code for www.conal.tech
+Source code for http://conal.tech
