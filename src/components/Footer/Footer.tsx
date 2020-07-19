@@ -14,15 +14,16 @@ const useStyles = makeStyles({
     
   },
   p: {
+    color: 'white'
   },
   a: {
     '& visited': {
       textDecoration: 'none',
-      color: 'black'
+      color: 'white'
     },
 
     textDecoration: 'none',
-    color: 'black'
+    color: 'white'
   }
 });
 
